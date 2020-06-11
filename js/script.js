@@ -22,7 +22,7 @@ function initNavbar() {
 
         var scroll = $(window).scrollTop();
 
-        if (scroll >= $("#home").height()) {
+        if (scroll >= $("#main").height()) {
             $navBar.addClass("fixed");
         } else {
             $navBar.removeClass("fixed");
