@@ -7,7 +7,7 @@ function initNavbar() {
     var $navTop = $("#navbar-top");
     var $navBar = $(".navbar");
     var $navExternal = $(".nav-external");
-
+    var $OI_section = $("#_BOOK_Observation_interview");
     $navBar.onePageNav({
         currentClass: "active",
         changeHash: false,
@@ -18,18 +18,20 @@ function initNavbar() {
         easing: EASING
     });
 
-    $(window).on("scroll", function(event) {
+    $(window).on("scroll", function (event) {
 
         var scroll = $(window).scrollTop();
 
         if (scroll >= $("#main").height()) {
             $navBar.addClass("fixed");
+            $OI_section.addClass("margintop70");
         } else {
             $navBar.removeClass("fixed");
+            $OI_section.removeClass("margintop70");
         }
     }).trigger("scroll");
 
-    $navExternal.click(function(e) {
+    $navExternal.click(function (e) {
         e.preventDefault();
 
         $("html, body").stop().animate({
@@ -44,7 +46,7 @@ function initPortfolio() {
     var $items = $portfolio.find(".items");
     var $filters = $portfolio.find(".filters li a");
 
-    $items.imagesLoaded(function() {
+    $items.imagesLoaded(function () {
 
         $items.isotope({
             itemSelector: ".item",
@@ -53,7 +55,7 @@ function initPortfolio() {
         });
     });
 
-    $filters.click(function() {
+    $filters.click(function () {
 
         var $el = $(this);
 
@@ -83,7 +85,7 @@ function initAnimations() {
         force_process: true
     });
 
-    $animated.on("appear", function() {
+    $animated.on("appear", function () {
 
         var $el = $(this);
 
@@ -97,7 +99,7 @@ function initAnimations() {
 
         if (delay) {
 
-            setTimeout(function() {
+            setTimeout(function () {
                 $el.addClass(animation);
                 $el.addClass("showing");
                 $el.removeClass("hiding");
@@ -111,24 +113,48 @@ function initAnimations() {
     });
 
     // Service hover animation
-    $(".service").hover(function() {
+    // $("._BOOK_Observation_interview").hover(function() {
+    //     $("i", this).addClass("animated tada");
+    // }, function() {
+    //     $("i", this).removeClass("animated tada");
+    // });
+
+    $(".service").hover(function () {
         $("i", this).addClass("animated tada");
-    }, function() {
+    }, function () {
         $("i", this).removeClass("animated tada");
     });
+
+    $("#UserStory").hover(function () {
+        $(".centerSlick").slick('slickGoTo',0,false);
+    });
+
+    $("#UserStory_Carousel").click(function () {
+        $(".centerSlick").slick('slickGoTo',0,false);
+    })
 }
 
-$(document).ready(function() {
-
+$(document).ready(function () {
     initNavbar();
     initPortfolio();
     initAnimations();
+
+    $(".centerSlick").slick({
+        centerMode: false,
+        centerPadding: '0px',
+        slidesToShow: 3,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+        infinite: false,
+    }); 
 });
 
-$(window).on("load", function() {
+$(window).on("load", function () {
 
     var $loader = $(".loader");
 
     $loader.find(".loading").fadeOut();
     $loader.fadeOut("slow");
 });
+
