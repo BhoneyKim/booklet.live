@@ -255,6 +255,7 @@ a:focus {
   margin-bottom: 4rem;
 }
 
+
 #portfolio {
   width: 100%;
 }
@@ -426,10 +427,7 @@ a:focus {
 }
 
 #contact {
-  background: url(../img/cover/contact.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  marginbott
 }
 
 #contact,
@@ -451,12 +449,6 @@ a:focus {
   margin: 4rem 0 1rem;
 }
 
-#footer {
-  padding: 4rem 0;
-  color: #ccc;
-  text-align: center;
-  background: #233b6f;
-}
 
 #footer a,
 #footer a:hover,
@@ -591,6 +583,7 @@ a:focus {
   height: 940px;
   padding-top: 180px;
   color: #fff;
+  margin-bottom: 33vh;
 }
 .margintop70{
     margin-top: 70px;
@@ -602,9 +595,9 @@ a:focus {
   background-position: center center;
   background-size: cover;
   width: 100vw;
-  min-height: 940px;
+  min-height: 1040px;
   color: #fff;
-  margin-bottom: 876px;
+  margin-bottom: 10vh;
 }
 
 #servicesText {
@@ -629,6 +622,7 @@ a:focus {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
+  margin-bottom: 25vh;;
 }
 
 #_BOOK___Ideation_sheets {
@@ -640,6 +634,7 @@ a:focus {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
+  margin-bottom: 15vh;
 }
 
 #_BOOK___Wireframe {
@@ -651,6 +646,19 @@ a:focus {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  margin-bottom: 15vh;
+}
+
+#_BOOK___AKandMB_header {
+  width: 100vw;
+  min-height: 180px;
+  padding: 0;
+  background-color: #fff;
+  background-image: url(../img/_BOOK___AKandMB_header.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 0;
 }
 
 #_BOOK_Branding {
@@ -661,12 +669,14 @@ a:focus {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
+  margin-bottom: 50vh;
 }
 
 #clients {
   min-height: 60vh;
   color: #000;
   background: #fff;
+  margin-bottom: 50vh;
 }
 #UserStory {
     width: 100vw;
@@ -688,6 +698,7 @@ a:focus {
 #AKandMB {
   width: 100%;
   height: 80vh;
+  margin-bottom: 25vh;
 }
 
 #miro_iframe{
@@ -715,3 +726,13 @@ a:focus {
     /* scale: 0.9; */
   }
     
+#work{
+  margin-bottom: 66vh;
+}
+  
+#footer {
+  padding: 4rem 0;
+  color: #ccc;
+  text-align: center;
+  background: #108577;
+}

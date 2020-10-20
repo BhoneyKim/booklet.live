@@ -148,6 +148,25 @@ $(document).ready(function () {
         arrows: false,
         infinite: false,
     }); 
+
+    $(".centerSlick2").slick({
+        centerMode: false,
+        centerPadding: '0px',
+        slidesToShow: 1,
+        autoplay: false,
+        autoplaySpeed: 1000,
+        arrows: false,
+        infinite: false,
+    }); 
+    $(".centerSlick3").slick({
+        centerMode: false,
+        centerPadding: '0px',
+        slidesToShow: 1,
+        autoplay: false,
+        autoplaySpeed: 1000,
+        arrows: false,
+        infinite: false,
+    }); 
 });
 
 $(window).on("load", function () {
